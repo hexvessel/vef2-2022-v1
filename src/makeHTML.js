@@ -18,8 +18,8 @@ export function makeHTML(data,stats){
 export function makeIndex(datasets){
     let list = '';
     for (const data of datasets) {
-      const { file, fileName } = entry;
-      const link = `<li><a href="${`${file}.html`}">${fileName}</a></li>`;
+      const { file, fileName } = data;
+      const link = `<li><a href="${`${fileName}`}">${file}</a></li>`;
       list += link;
     }
   

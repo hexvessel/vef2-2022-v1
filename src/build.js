@@ -34,7 +34,7 @@ async function main() {
         const fileName = file.split('.')[0]+'.html'; 
         const dataset = statsTemplate(fileName,html,true);
         
-        await writeFile(slug, dataset, {flag: 'w+'});
+        await writeFile(join(OUTPUT_DIR, fileName), dataset, {flag: 'w+'});
         datasets.push({file:file,fileName:fileName});
     }
     const index = statsTemplate('Forsíða',makeIndex(datasets));
