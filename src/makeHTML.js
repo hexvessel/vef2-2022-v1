@@ -31,7 +31,7 @@ export function statsTemplate(title, data, showBack = false) {
     <html>
       <head>
         <title>${title ?? ""}</title>
-        <link rel="stylesheet" href="../public/styles.css">
+        <link rel="stylesheet" href="./styles.css">
       </head>
       <body>
         ${data ?? ""}
