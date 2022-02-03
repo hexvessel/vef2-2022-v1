@@ -1,6 +1,5 @@
-export function makeHTML(data,stats){
-
-    const template = `
+export function makeHTML(data, stats) {
+  const template = `
       <section>
         <p>: min: ${stats.min}</p>
         <p>: max: ${stats.max}</p>
@@ -12,30 +11,30 @@ export function makeHTML(data,stats){
         ${data}
       </section>
     `;
-  
-    return template;
+
+  return template;
 }
-export function makeIndex(datasets){
-    let list = '';
-    for (const data of datasets) {
-      const { file, fileName } = data;
-      const link = `<li><a href="${`${fileName}`}">${file}</a></li>`;
-      list += link;
-    }
-  
-    return `<ul>${list}</ul>`;
+export function makeIndex(datasets) {
+  let list = "";
+  for (const data of datasets) {
+    const { file, fileName } = data;
+    const link = `<li><a href="${`${fileName}`}">${file}</a></li>`;
+    list += link;
+  }
+
+  return `<ul>${list}</ul>`;
 }
-export function statsTemplate(title,data,showBack = false) {
-    const back = showBack ? '<p><a href="/">Til baka</a></p>' : '';
-    return `
+export function statsTemplate(title, data, showBack = false) {
+  const back = showBack ? '<p><a href="/">Til baka</a></p>' : "";
+  return `
     <!doctype html>
     <html>
       <head>
-        <title>${title ?? ''}</title>
+        <title>${title ?? ""}</title>
         <link rel="stylesheet" href="../public/styles.css">
       </head>
       <body>
-        ${data ?? ''}
+        ${data ?? ""}
         ${back}
       </body>
     </html>`;
