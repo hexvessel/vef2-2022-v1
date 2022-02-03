@@ -11,8 +11,11 @@ export function makeHTML(data, stats) {
         ${data}
       </section>
     `;
-
-  return template;
+  if(data.length == 0){
+    return 'engin gögn';
+  } else{
+    return template;
+  }
 }
 export function makeIndex(datasets) {
   let list = "";
