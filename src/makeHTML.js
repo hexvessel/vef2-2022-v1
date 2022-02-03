@@ -11,8 +11,12 @@ export function makeHTML(data, stats) {
         ${data}
       </section>
     `;
-  if(data.length == 0){
-    return 'engin gögn';
+  if(data.length <= 1){
+    return `
+    <section>
+      <p>: engin lögleg gögn</p>
+    </section>
+  `;
   } else{
     return template;
   }
